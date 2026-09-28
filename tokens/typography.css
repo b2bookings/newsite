@@ -1,0 +1,41 @@
+:root{
+/* Rubik for everything — headlines and body alike, weight carries hierarchy
+   (brand guidelines p.11). There is no second typeface in this brand. */
+--font-core:"Rubik",ui-sans-serif,system-ui,sans-serif;
+--font-mono:ui-monospace,"SFMono-Regular",Menlo,monospace; /* data readouts only */
+
+--weight-light:300; /* @kind font */
+--weight-regular:400; /* @kind font */
+--weight-medium:500; /* @kind font */
+--weight-semibold:600; /* @kind font */
+--weight-bold:700; /* @kind font */
+
+/* Type scale — 1.25-ish ramp. Desktop values; the three largest step down at
+   narrow widths via the media query below. */
+--text-display:4.5rem;  /* 72 */
+--text-h1:3.25rem;      /* 52 */
+--text-h2:2.5rem;       /* 40 */
+--text-h3:1.5rem;       /* 24 */
+--text-h4:1.25rem;      /* 20 */
+--text-lead:1.1875rem;  /* 19 */
+--text-body-lg:1.0625rem; /* 17 */
+--text-body-md:1rem;      /* 16 */
+--text-body-sm:0.9375rem; /* 15 */
+--text-caption:0.8125rem; /* 13 */
+--text-micro:0.6875rem;   /* 11 */
+
+--leading-tight:1.05; /* @kind font */
+--leading-snug:1.2; /* @kind font */
+--leading-normal:1.45; /* @kind font */
+--leading-relaxed:1.6; /* @kind font */
+
+/* Headlines tighten, the eyebrow/tagline treatment tracks wide — the tagline
+   lockup "WE DO WATER DIFFERENT." is set caps with generous letterspacing. */
+--tracking-display:-0.02em; /* @kind font */
+--tracking-heading:-0.01em; /* @kind font */
+--tracking-normal:0; /* @kind font */
+--tracking-wide:0.08em; /* @kind font */
+--tracking-eyebrow:0.16em; /* @kind font */
+}
+@media (max-width:1024px){:root{--text-display:3.5rem;--text-h1:2.625rem;--text-h2:2rem}}
+@media (max-width:640px){:root{--text-display:2.75rem;--text-h1:2.125rem;--text-h2:1.625rem;--text-h3:1.3125rem}}

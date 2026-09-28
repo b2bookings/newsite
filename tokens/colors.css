@@ -1,0 +1,98 @@
+:root{
+/* ---- Brand primaries (brand guidelines p.12, verbatim) ---- */
+--sg-navy:#003b5c;          /* PANTONE 302  */
+--sg-blue:#4f9ec6;          /* PANTONE 2171 */
+--sg-light-blue:#caf0f8;    /* PANTONE 290  */
+--sg-gray:#ccdbdd;          /* PANTONE 537  */
+--sg-black:#231f20;         /* single-colour logo black */
+--sg-white:#ffffff;
+
+/* Values baked into the supplied logo SVGs. They differ from the guideline
+   swatches by 1-2 steps; guidelines win for UI, these exist so vector art can be
+   matched exactly when a logo sits on a flat colour field. */
+--sg-navy-logo:#073c5c;
+--sg-blue-logo:#4f9ec7;
+--sg-light-blue-logo:#ccebf3;
+--sg-gray-logo:#cddbdd;
+
+/* ---- Derived ramps ----
+   Not in the guidelines. Interpolated in oklch from the four primaries so UI needs
+   (hover, press, borders, disabled, surface tints) stay inside the brand palette. */
+--navy-900:#00263b;
+--navy-800:#002f49;
+--navy-700:#003b5c;         /* = --sg-navy */
+--navy-600:#0d5074;
+--navy-500:#1f688f;
+--blue-600:#3181ab;
+--blue-500:#4f9ec6;         /* = --sg-blue */
+--blue-400:#7bb8d6;
+--blue-300:#a5d2e6;
+--blue-200:#caf0f8;         /* = --sg-light-blue */
+--blue-100:#e4f7fb;
+--blue-050:#f2fbfd;
+--gray-500:#7f9093;
+--gray-400:#a6b6b9;
+--gray-300:#ccdbdd;         /* = --sg-gray */
+--gray-200:#e2eaeb;
+--gray-100:#f0f4f5;
+--gray-050:#f8fafa;
+
+/* ---- Semantic status ----
+   Intentional addition: the guidelines define no status palette, and OptiClear is a
+   monitoring platform that must show alarm state. Hues are pulled toward the brand
+   so they read as part of the family, not stock traffic-light colours. */
+--status-ok:#1d7a5f;
+--status-ok-surface:#e6f4ef;
+--status-watch:#b07208;
+--status-watch-surface:#fdf3e0;
+--status-alarm:#b3352c;
+--status-alarm-surface:#fceceb;
+--status-offline:#7f9093;
+--status-offline-surface:#f0f4f5;
+
+/* ---- Semantic aliases: text ---- */
+--text-heading:var(--sg-navy);
+--text-body:#2f4553;
+--text-muted:#5d7580;
+--text-subtle:var(--gray-500);
+--text-inverse:var(--sg-white);
+--text-inverse-muted:#bcd4e0;
+--text-accent:var(--navy-600);
+--text-link:var(--navy-600);
+--text-link-hover:var(--sg-navy);
+
+/* ---- Semantic aliases: surface ---- */
+--surface-page:var(--sg-white);
+--surface-subtle:var(--gray-050);
+--surface-sunken:var(--gray-100);
+--surface-card:var(--sg-white);
+--surface-accent:var(--blue-050);
+--surface-accent-strong:var(--sg-light-blue);
+--surface-navy:var(--sg-navy);
+--surface-navy-deep:var(--navy-900);
+--surface-blue:var(--sg-blue);
+
+/* ---- Semantic aliases: border ---- */
+--border-subtle:var(--gray-200);
+--border-default:var(--gray-300);
+--border-strong:var(--gray-400);
+--border-accent:var(--blue-400);
+--border-inverse:rgba(255,255,255,.22);
+
+/* ---- Semantic aliases: interactive ---- */
+--action-primary:var(--sg-navy);
+--action-primary-hover:var(--navy-600);
+--action-primary-press:var(--navy-900);
+--action-secondary:var(--sg-blue);
+--action-secondary-hover:var(--blue-600);
+--action-secondary-press:var(--navy-600);
+--action-disabled:var(--gray-300);
+--action-disabled-text:var(--gray-500);
+--focus-ring:var(--sg-blue);
+
+/* ---- Brand gradients (guidelines p.14: brand blues + gray, soft and diagonal) ---- */
+--gradient-navy-blue:linear-gradient(150deg,var(--navy-900) 0%,var(--sg-navy) 38%,var(--navy-500) 78%,var(--blue-600) 100%);
+--gradient-deep-light:linear-gradient(160deg,var(--navy-900) 0%,var(--sg-navy) 30%,var(--blue-500) 62%,var(--sg-light-blue) 100%);
+--gradient-light-wash:linear-gradient(165deg,var(--blue-050) 0%,var(--sg-light-blue) 55%,var(--gray-300) 100%);
+--gradient-scrim:linear-gradient(180deg,rgba(0,38,59,0) 0%,rgba(0,38,59,.55) 55%,rgba(0,38,59,.88) 100%); /* @kind color */
+}
